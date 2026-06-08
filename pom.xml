@@ -18,7 +18,7 @@
         <testng.version>7.4.0</testng.version>
         <allure.version>2.23.0</allure.version>
         <aspectj.version>1.9.19</aspectj.version>
-        <threadCount>3</threadCount>
+        <threadCount>5</threadCount>
     </properties>
 
     <dependencies>
