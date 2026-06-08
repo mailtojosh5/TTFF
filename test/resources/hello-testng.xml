@@ -1,0 +1,7 @@
+<suite name="HelloWorldSuite">
+    <test name="HelloWorldTest">
+        <classes>
+            <class name="com.automation.tests.HelloWorldTest"/>
+        </classes>
+    </test>
+</suite>

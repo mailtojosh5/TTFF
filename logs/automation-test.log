@@ -1,0 +1,28 @@
+[2026-05-19 19:11:12] [TestNG-test=Test-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-05-19 19:11:12] [TestNG-test=Test-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 05d763e9-fe74-4133-9283-834d3e322b7b not found
+[2026-05-19 19:35:53] [TestNG-test=Test-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-05-19 19:35:53] [TestNG-test=Test-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 00f08c0c-d4d8-4a60-a40a-f07eb09d4220 not found
+[2026-05-20 14:09:21] [TestNG-test=Test-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-05-20 14:09:21] [TestNG-test=Test-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 216478d9-87d8-4da3-b849-edde10258706 not found
+[2026-06-08 18:26:22] [TestNG-PoolService-0] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:26:22] [TestNG-PoolService-0] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 5726b3e5-faf2-4594-acbf-0d99b5337118 not found
+[2026-06-08 18:27:18] [TestNG-PoolService-3] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:27:18] [TestNG-PoolService-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:27:18] [TestNG-PoolService-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid c4949104-18da-4767-9cb8-84a1544a3437 not found
+[2026-06-08 18:27:18] [TestNG-PoolService-3] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid f4ddb579-3408-4da3-a171-628a1b0d1b8c not found
+[2026-06-08 18:27:20] [TestNG-PoolService-4] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:27:20] [TestNG-PoolService-4] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid ce89d191-4c35-42cc-a083-224bffb7e561 not found
+[2026-06-08 18:27:20] [TestNG-PoolService-2] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:27:20] [TestNG-PoolService-2] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 48a9f939-233b-4284-8071-a7c75aa373c0 not found
+[2026-06-08 18:28:11] [TestNG-PoolService-0] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:28:11] [TestNG-PoolService-0] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 4b203d4b-77e7-4ee8-b2a6-b6d4b00c0b7b not found
+[2026-06-08 18:30:40] [TestNG-PoolService-0] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:30:40] [TestNG-PoolService-0] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid a0f8cdc3-1899-42b0-8f19-503902d40334 not found
+[2026-06-08 18:30:45] [TestNG-PoolService-2] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:30:45] [TestNG-PoolService-2] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid e3d01b74-6b45-4f1d-bbcd-ef99a46a1557 not found
+[2026-06-08 18:30:45] [TestNG-PoolService-4] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:30:45] [TestNG-PoolService-4] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid fa48079b-6dd0-4956-b7f1-e3e50295cf07 not found
+[2026-06-08 18:30:46] [TestNG-PoolService-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:30:46] [TestNG-PoolService-1] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid dcf7968a-95b1-4de6-b5d6-288bf2d1a28b not found
+[2026-06-08 18:31:34] [TestNG-PoolService-3] [ERROR] io.qameta.allure.AllureLifecycle - Could not start step: no test case running
+[2026-06-08 18:31:34] [TestNG-PoolService-3] [ERROR] io.qameta.allure.AllureLifecycle - Could not stop step: step with uuid 79b1190b-c1bb-4919-875a-88ddbc645f8e not found

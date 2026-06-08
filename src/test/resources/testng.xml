@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-current.dtd">
+<suite name="Selenium Hybrid Allure Suite" parallel="methods" verbose="2">
+    <listeners>
+        <listener class-name="com.automation.listeners.TestListener"/>
+        <listener class-name="com.automation.listeners.InvokedMethodListener"/>
+    </listeners>
+    <test  parallel="methods" name="Test">
+    <classes>
+      <class name="com.automation.tests.TestRunner"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Selenium Hybrid Allure Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num attn">5</td><td class="num">64,095</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Selenium Hybrid Allure Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">com.automation.tests.TestRunner</td><td><a href="#m0">executeTestFlow</a></td><td rowspan="5">1780957838120</td><td rowspan="5">2771</td></tr><tr class="failedeven"><td><a href="#m1">executeTestFlow</a></td></tr><tr class="failedeven"><td><a href="#m2">executeTestFlow</a></td></tr><tr class="failedeven"><td><a href="#m3">executeTestFlow</a></td></tr><tr class="failedeven"><td><a href="#m4">executeTestFlow</a></td></tr><tr><th colspan="4">Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="5">com.automation.tests.TestRunner</td><td><a href="#m5">executeTestFlow</a></td><td rowspan="5">1780957838120</td><td rowspan="5">2771</td></tr><tr class="retriedeven"><td><a href="#m6">executeTestFlow</a></td></tr><tr class="retriedeven"><td><a href="#m7">executeTestFlow</a></td></tr><tr class="retriedeven"><td><a href="#m8">executeTestFlow</a></td></tr><tr class="retriedeven"><td><a href="#m9">executeTestFlow</a></td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC001</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC004</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: Flow execution failed
+	at com.automation.executor.Driver.executeFlow(Driver.java:80)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:120)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: Keyword execution failed: executeMobileTest
+	at com.automation.executor.Driver.executeKeyword(Driver.java:124)
+	at com.automation.executor.Driver.executeFlow(Driver.java:51)
+	... 22 more
+	at com.automation.executor.Driver.executeKeyword(Driver.java:116)
+	... 23 more
+Caused by: java.lang.RuntimeException: Mobile test execution failed
+	at com.automation.businesscomponents.executeMobileTest.executeMobileTest(executeMobileTest.java:32)
+	... 28 more
+Caused by: java.lang.RuntimeException: ❌ Mobile click failed on Submit Button: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c3b30f3325ad435da842ab25c5650adb, findElement {using=xpath, value=//button[@text=&apos;Submit&apos;]}]
+Capabilities {appium:adbExecTimeout: 90000, appium:app: /tmp/tmpC2_0XG/Android-MyDe..., appium:appPackage: com.saucelabs.mydemoapp.rn, appium:appWaitDuration: 90000, appium:automationName: UiAutomator2, appium:chromeOptions: {args: [--disable-fre, --disable-popup-blocking, --enable-automation, --enable-remote-debugging, --ignore-certificate-errors, --metrics-recording-only, --no-first-run, --disable-startup-promos-fo..., --ignore-certificate-errors...]}, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 90000, app: /tmp/tmpC2_0XG/Android-MyDe..., appWaitDuration: 90000, automationName: UiAutomator2, chromeOptions: {args: [--disable-fre, --disable-popup-blocking, --enable-automation, --enable-remote-debugging, --ignore-certificate-errors, --metrics-recording-only, --no-first-run, --disable-startup-promos-fo..., --ignore-certificate-errors...]}, deviceName: Android GoogleAPI Emulator, eventTimings: true, maxTypingFrequency: 8, newCommandTimeout: 0, noReset: true, noSign:noSign: true, orientation: PORTRAIT, platformName: ANDROID, platformVersion: 12.0, proxy: {proxyAutoconfigUrl: http://127.0.0.1:19876/pac.js, proxyType: pac}, sauce:options: {}, selenium:webdriver.remote.quietExceptions: false, udid: emulator-5554, uiautomator2ServerInstallTimeout: 90000}, appium:deviceApiLevel: 32, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 768x1280, appium:deviceUDID: emulator-5554, appium:eventTimings: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:maxTypingFrequency: 8, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 0, appium:noReset: true, appium:orientation: PORTRAIT, appium:pixelRatio: 2, appium:platformVersion: 12, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:uiautomator2ServerInstallTimeout: 90000, appium:viewportRect: {height: 1200, left: 0, top: 48, width: 768}, appium:warnings: {}, appium:webStorageEnabled: false, noSign:noSign: true, platformName: ANDROID, proxy: Proxy(pac: http://127.0.0.1..., sauce:options: {}, selenium:webdriver.remote.quietExceptions: false}
+Session ID: c3b30f3325ad435da842ab25c5650adb
+	at com.automation.utilities.CommonFunctions.clickMobileElement(CommonFunctions.java:276)
+	at com.automation.businesscomponents.executeMobileTest.executeMobileTest(executeMobileTest.java:25)
+	... 28 more
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC005</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC003</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC002</td><td>@regression</td><td>sauce mobile</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [], extensions: []}, platformName: Windows 11, sauce:options: {accessKey: bb2cc135-6036-4e2a-9e33-703..., build: selenium-build-GLMJZ, name: mobileautomation test, username: oauth-shilluchimmu-91931}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [], extensions: []}, platformName: Windows 11, sauce:options: {accessKey: bb2cc135-6036-4e2a-9e33-703..., build: selenium-build-GLMJZ, name: mobileautomation test, username: oauth-shilluchimmu-91931}}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [], extensions: []}, platformName: Windows 11, sauce:options: {accessKey: bb2cc135-6036-4e2a-9e33-703..., build: selenium-build-GLMJZ, name: mobileautomation test, username: oauth-shilluchimmu-91931}}]}]
+Capabilities {browserName: chrome, browserVersion: latest, goog:chromeOptions: {args: [], extensions: []}, platformName: Windows 11, sauce:options: {accessKey: bb2cc135-6036-4e2a-9e33-703..., build: selenium-build-GLMJZ, name: mobileautomation test, username: oauth-shilluchimmu-91931}}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:162)
+	at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:233)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:142)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:69)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC005</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC003</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC005</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC003</td><td>@regression</td><td>sauce android</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.automation.tests.TestRunner#executeTestFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>TC002</td><td>@regression</td><td>sauce mobile</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.RuntimeException: WebDriver initialization failed
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:42)
+	at com.automation.tests.TestRunner.lambda$0(TestRunner.java:117)
+	at io.qameta.allure.Allure.lambda$step$0(Allure.java:113)
+	at io.qameta.allure.Allure.lambda$step$1(Allure.java:127)
+	at io.qameta.allure.Allure.step(Allure.java:181)
+	at io.qameta.allure.Allure.step(Allure.java:125)
+	at io.qameta.allure.Allure.step(Allure.java:112)
+	at com.automation.tests.TestRunner.executeTestFlow(TestRunner.java:116)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:106)
+	at com.automation.executor.DriverManager.getDriver(DriverManager.java:29)
+	at com.automation.tests.BaseTest.initializeDriver(BaseTest.java:39)
+	... 22 more
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 400. Message: Job not started. Your organization has reached its concurrent session limit. Contact your administrator or sales@saucelabs.com to upgrade. 
+Host info: host: &apos;DESKTOP-2CPQ0LA&apos;, ip: &apos;192.168.1.79&apos;
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}]}]
+Capabilities {appium:app: storage:filename=Android-My..., appium:automationName: UiAutomator2, appium:deviceName: Android GoogleAPI Emulator, appium:platformVersion: 12.0, platformName: ANDROID, sauce:options: Capabilities {accessKey: bb...}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:139)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:95)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:270)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:162)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:91)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:103)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:109)
+	at com.automation.executor.DriverManager.createDriver(DriverManager.java:86)
+	... 24 more
+... Removed 9 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
