@@ -11,7 +11,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="executeTestFlow" invocation-numbers="1 2 0 4 4 2 2 4 1 3"/>
+          <include name="executeTestFlow" invocation-numbers="1 2 3 4 3 1 2 3 1 2 3 1 3 0"/>
         </methods>
       </class> <!-- com.automation.tests.TestRunner -->
     </classes>

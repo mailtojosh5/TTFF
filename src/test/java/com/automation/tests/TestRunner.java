@@ -37,7 +37,7 @@ public class TestRunner extends BaseTest {
                     "src\\test\\java\\com\\automation\\tests\\BusinessFlow.xlsx"
             );
 
-            Object[][] data = new Object[testData.size()][3];
+            Object[][] data = new Object[testData.size()][4];
             int index = 0;
 
             for (Map<String, String> row : testData) {
@@ -48,15 +48,23 @@ public class TestRunner extends BaseTest {
 
                 // Only include test cases marked for execution
                 if ("YES".equalsIgnoreCase(executeFlag)) {
+                    // Try common header names for execution key (column C)
+                    String executionKey = row.getOrDefault("ExecutionKey", 
+                            row.getOrDefault("TestExecutionKey", 
+                                    row.getOrDefault("TestExecution", 
+                                            row.getOrDefault("Execution", 
+                                                    row.getOrDefault("Column3", "")))));
+
                     data[index][0] = tcid;
                     data[index][1] = tags;
                     data[index][2] = browser;
+                    data[index][3] = executionKey;
                     index++;
                 }
             }
 
             // Trim array to actual size
-            Object[][] trimmedData = new Object[index][3];
+            Object[][] trimmedData = new Object[index][4];
             System.arraycopy(data, 0, trimmedData, 0, index);
 
             // Ensure at least `threadCount` test cases are returned so parallel threads can run.
@@ -67,7 +75,7 @@ public class TestRunner extends BaseTest {
             } catch (Exception ignored) {}
 
             if (threadCount > 0 && trimmedData.length > 0 && trimmedData.length < threadCount) {
-                Object[][] expanded = new Object[threadCount][3];
+                Object[][] expanded = new Object[threadCount][4];
                 for (int i = 0; i < threadCount; i++) {
                     expanded[i] = trimmedData[i % trimmedData.length];
                 }
@@ -88,7 +96,7 @@ public class TestRunner extends BaseTest {
     @Test(dataProvider = "testCaseData", groups = {"smoke", "regression"}, retryAnalyzer = RetryAnalyzer.class)
     @Story("Execute Business Flow")
     @Severity(SeverityLevel.NORMAL)
-    public void executeTestFlow(String testCaseId, String tags, String browserName) {
+    public void executeTestFlow(String testCaseId, String tags, String browserName, String executionKey) {
         try {
             // Add parameters to Allure report
             // Allure.parameter("TCID", testCaseId);
@@ -111,9 +119,10 @@ public class TestRunner extends BaseTest {
             Allure.parameter("TCID", testCaseId);
             Allure.parameter("Tags", tags);
             Allure.parameter("Browser", browserName);
+            Allure.parameter("XrayExecution", executionKey == null ? "" : executionKey);
             Allure.label("category", "Product defects");
 
-            Allure.step("🚀 Execute test flow for " + testCaseId, () -> {
+                Allure.step("🚀 Execute test flow for " + testCaseId, () -> {
                 initializeDriver(browserName);
 
                 // Execute the business flow

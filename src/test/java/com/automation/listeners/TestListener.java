@@ -58,6 +58,7 @@ public class TestListener implements ITestListener {
 
         Object[] parameters = result.getParameters();
         final String tcid = (parameters != null && parameters.length > 0) ? parameters[0].toString() : "Test Case";
+        final String xrayExecutionKey = (parameters != null && parameters.length > 3) ? parameters[3].toString() : "";
 
         if (verificationFailure != null) {
             // Attach throwable and mark TestNG result as failed
@@ -87,7 +88,11 @@ public class TestListener implements ITestListener {
             System.out.println("========================================\n");
             // Update Xray: mark as PASSED
             try {
-                XrayClient.updateTestCaseStatus(tcid, "PASSED");
+                if (xrayExecutionKey != null && !xrayExecutionKey.isEmpty()) {
+                    XrayClient.updateTestCaseStatus(tcid, "PASSED", xrayExecutionKey);
+                } else {
+                    XrayClient.queueTestResult(tcid, "PASSED");
+                }
             } catch (Exception ignored) {}
         }
     }
@@ -97,6 +102,7 @@ public class TestListener implements ITestListener {
         Object[] parameters = result.getParameters();
         final String tcid = (parameters != null && parameters.length > 0) ? 
             parameters[0].toString() : "Test Case";
+        final String xrayExecutionKey = (parameters != null && parameters.length > 3) ? parameters[3].toString() : "";
         
         System.out.println("\n========================================");
         System.out.println("❌ FAILED " + tcid);
@@ -109,7 +115,11 @@ public class TestListener implements ITestListener {
         Allure.step("FAILED " + tcid, Status.FAILED);
         // Update Xray: mark as FAILED
         try {
-            XrayClient.updateTestCaseStatus(tcid, "FAILED");
+            if (xrayExecutionKey != null && !xrayExecutionKey.isEmpty()) {
+                XrayClient.updateTestCaseStatus(tcid, "FAILED", xrayExecutionKey);
+            } else {
+                XrayClient.queueTestResult(tcid, "FAILED");
+            }
         } catch (Exception ignored) {}
     }
 
@@ -119,8 +129,13 @@ public class TestListener implements ITestListener {
         // Update Xray: mark as SKIPPED
         Object[] parameters = result.getParameters();
         final String tcid = (parameters != null && parameters.length > 0) ? parameters[0].toString() : result.getName();
+        final String xrayExecutionKey = (parameters != null && parameters.length > 3) ? parameters[3].toString() : "";
         try {
-            XrayClient.updateTestCaseStatus(tcid, "SKIPPED");
+            if (xrayExecutionKey != null && !xrayExecutionKey.isEmpty()) {
+                XrayClient.updateTestCaseStatus(tcid, "SKIPPED", xrayExecutionKey);
+            } else {
+                XrayClient.queueTestResult(tcid, "SKIPPED");
+            }
         } catch (Exception ignored) {}
     }
 
@@ -131,6 +146,10 @@ public class TestListener implements ITestListener {
         System.out.println("Passed: " + context.getPassedTests().size());
         System.out.println("Failed: " + context.getFailedTests().size());
         System.out.println("Skipped: " + context.getSkippedTests().size() + "\n");
+        // Flush any queued Xray updates (batched when no per-row execution key provided)
+        try {
+            XrayClient.flushBatch();
+        } catch (Exception ignored) {}
     }
 
     @Override
